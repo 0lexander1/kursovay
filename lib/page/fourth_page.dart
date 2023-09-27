@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_beginning/widget/button.dart';
 import 'package:flutter_beginning/page/first_page.dart';
 
+
 class FourthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.only(top: 8.0),
           child: Center(
@@ -17,7 +19,7 @@ class FourthScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Button(
+                    ButtonPush(
                       txt: "Назад", 
                       page: (context) => FirstScreen(),
                       colortxt: Color.fromARGB(255, 255, 255, 255), 
@@ -25,7 +27,7 @@ class FourthScreen extends StatelessWidget {
                       backgroundColor: Color.fromARGB(255, 105, 220, 220),
                       )
                    ],
-                 ),
+                )
               ],
             ),
           ),

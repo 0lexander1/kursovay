@@ -18,7 +18,7 @@ class TextPlace extends StatelessWidget {
     double rectangleWidth = screenWidth * width; 
     // Вычисляем высоту прямоугольника
     double screenHeight = MediaQuery.of(context).size.height;
-    double rectangleHeight = screenHeight * height - 4;
+    double rectangleHeight = screenHeight * height;
 
       return Container(
       width: rectangleWidth,

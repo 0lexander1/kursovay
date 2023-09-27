@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatelessWidget {
+class ButtonPush extends StatelessWidget {
   final String txt;
   final Color backgroundColor;
   final double width;
@@ -10,7 +10,7 @@ class Button extends StatelessWidget {
 
  
 
-  Button({required this.txt, required this.page, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
+  ButtonPush({required this.txt, required this.page, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class Button extends StatelessWidget {
     double rectangleWidth = screenWidth * width; 
     // Вычисляем высоту прямоугольника
     double screenHeight = MediaQuery.of(context).size.height;
-    double rectangleHeight = screenHeight * height - 4;
+    double rectangleHeight = screenHeight * height;
 
 
    
