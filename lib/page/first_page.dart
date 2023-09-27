@@ -5,7 +5,6 @@ import 'package:flutter_beginning/widget/button.dart';
 import 'package:flutter_beginning/widget/button_text.dart';
 import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/page/second_page.dart';
-import 'package:flutter_beginning/widget/picture_main.dart';
 
 class FirstScreen extends StatelessWidget {
   final String butSkeep = "Пропустить";
