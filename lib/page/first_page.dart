@@ -7,7 +7,7 @@ import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/page/second_page.dart';
 
 class FirstScreen extends StatelessWidget {
-  final String butSkeep = "Пропустить";
+  final String butSkip = "Пропустить";
   final String txt = "Анализы";
   final String txt2 = "Экспресс сбор и получение проб";
   
@@ -32,7 +32,7 @@ class FirstScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ButtonText(
-                      txt: butSkeep, 
+                      txt: butSkip, 
                       width: 0.4,
                       height: 0.1, 
                       backgroundColor: Color.fromARGB(0, 255, 255, 255), 

@@ -8,7 +8,7 @@ import 'package:flutter_beginning/page/fourth_page.dart';
 import 'package:flutter_beginning/page/second_page.dart';
 
 class ThirdScreen extends StatelessWidget {
-  final String butSkeep = "Завершить";
+  final String butSkip = "Завершить";
   final String txt = "Мониторинг";
   final String txt2 = "Наши врачи всегда наблюдают за вашими показателями здоровья";
   
@@ -33,7 +33,7 @@ class ThirdScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ButtonText(
-                      txt: butSkeep, 
+                      txt: butSkip, 
                       width: 0.4,
                       height: 0.1, 
                       backgroundColor: Color.fromARGB(0, 255, 255, 255), 
