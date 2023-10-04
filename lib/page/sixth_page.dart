@@ -12,12 +12,14 @@ class SixthScreen extends StatefulWidget {
 }
 
 class _SixthScreenState extends State<SixthScreen> {
+  List<String> codeList = List.filled(4, '');
   TextEditingController _codeController = TextEditingController();
-  List<bool> circleStates = [false, false, false, false];
 
  void updateCircles() {
-    for (int i = 0; i < circleStates.length; i++) {
-      circleStates[i] = i < _codeController.text.length;
+    for (int i = 0; i < codeList.length; i++) {
+      codeList[i] = i < _codeController.text.length
+          ? _codeController.text[i]
+          : ''; // Записываем соответствующую цифру или пустую строку
     }
     setState(() {});
   }
@@ -97,14 +99,14 @@ class _SixthScreenState extends State<SixthScreen> {
                 SizedBox(height: screenHeight * 0.06,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: circleStates.map((isFilled) {
+                  children: codeList.map((code) {
                     return Container(
                       width: 20.0,
                       height: 20.0,
                       margin: EdgeInsets.symmetric(horizontal: 4.0),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: isFilled ? Colors.blue : Colors.grey,
+                        color: code.isNotEmpty ? Colors.blue : Colors.grey,
                       ),
                     );
                   }).toList(),
