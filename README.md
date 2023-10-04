@@ -39,5 +39,10 @@
 
 ![image](https://github.com/DubstepTC/flutter_beginning/assets/118935884/65b0c9b3-7914-4c4c-b51f-08e00218a979)
 
+<h2> Ввод кода отображается на индекаторе сверху </h2>
+
+![image](https://github.com/DubstepTC/flutter_beginning/assets/118935884/a258e8a4-74a4-41c6-911b-064fa1a37dcf)
+
+
 
 <h1> Седьмой экран </h1>
