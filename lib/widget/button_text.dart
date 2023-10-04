@@ -7,8 +7,9 @@ class ButtonText extends StatelessWidget {
   final double width;
   final double height; 
   final Color colortxt;
+  final Widget Function(BuildContext) page;
 
-  const ButtonText({required this.txt, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
+  const ButtonText({required this.page, required this.txt, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class ButtonText extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FourthScreen(), 
+            builder: page, 
           ),
         );
         },

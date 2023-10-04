@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_beginning/page/sixth_page.dart';
 
 
 class CodeInput extends StatefulWidget {
@@ -11,6 +12,35 @@ class _CodeInputState extends State<CodeInput> {
     4,
     (index) => TextEditingController(),
   );
+
+
+  String combinedText = ''; // Переменная для кода
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Следим за изменениями в каждом контроллере и обновляем combinedText
+    for (int i = 0; i < controllers.length; i++) {
+      controllers[i].addListener(() {
+        setState(() {
+          combinedText = controllers.map((controller) => controller.text).join();
+        });
+
+        // Проверяем, если текст достаточно длинный, то выполняем навигацию
+        if (combinedText.length == 4) {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => SixthScreen()));
+        }
+      });
+    }
+  }
+  
+ void moveToNextField(int currentIndex) {
+    if (currentIndex < controllers.length - 1) {
+      // Фокусируемся на следующем контроллере
+      FocusScope.of(context).nextFocus();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +72,10 @@ class _CodeInputState extends State<CodeInput> {
                 counterText:"",
                 border: InputBorder.none,
               ),
+              onChanged: (_) {
+                // Вызываем метод для автоматического перехода
+                moveToNextField(i);
+              }
             ),
           ),
       ],

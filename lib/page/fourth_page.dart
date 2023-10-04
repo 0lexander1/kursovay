@@ -3,10 +3,24 @@ import 'package:flutter_beginning/widget/button.dart';
 import 'package:flutter_beginning/page/first_page.dart';
 import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/widget/field.dart';
-import 'package:flutter_beginning/page/fifth.dart';
+import 'package:flutter_beginning/page/fifth_page.dart';
 
 
-class FourthScreen extends StatelessWidget {
+class FourthScreen extends StatefulWidget {
+  @override
+  _FourthScreenState createState() => _FourthScreenState();
+}
+
+class _FourthScreenState extends State<FourthScreen> {
+  TextEditingController _emailController = TextEditingController();
+  bool _isButtonEnabled = false;
+
+
+  @override
+    void dispose() {
+    _emailController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +74,7 @@ class FourthScreen extends StatelessWidget {
                   ]
                 ),
                 SizedBox(height: screenHeight * 0.05,),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Field(
@@ -69,8 +83,14 @@ class FourthScreen extends StatelessWidget {
                       height: 0.1, 
                       colortxt: Colors.black45, 
                       mode: false, 
-                      hinttxt: "example@mail.ru"
-                      )
+                      hinttxt: "example@mail.ru",
+                      onChange: (value) {
+                        setState(() {
+                          _isButtonEnabled = value.isNotEmpty;
+                        });
+                      },
+                      controller: _emailController,
+                    )
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.02,),
@@ -78,13 +98,16 @@ class FourthScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ButtonPush(
+                      isEnabled: _isButtonEnabled ,
                       size: 16,
                       txt: "Далее", 
                       page: (context) => FifthScreen(),
                       colortxt: const Color.fromARGB(255, 255, 255, 255), 
                       width: 0.8, 
                       height: 0.09, 
-                      backgroundColor: const Color.fromARGB(255,201,212,251),
+                      backgroundColor: _isButtonEnabled
+                          ? const Color.fromARGB(255,26,111,238) // Цвет активной кнопки
+                          : const Color.fromARGB(255, 13, 33, 105),
                       )
                    ],
                 ),
@@ -108,6 +131,7 @@ class FourthScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ButtonPush(
+                      isEnabled: true,
                       size: 24,
                       page: (context) => FirstScreen(),
                       backgroundColor: Colors.white,

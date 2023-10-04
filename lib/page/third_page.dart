@@ -33,6 +33,7 @@ class ThirdScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ButtonText(
+                      page: (context) => FourthScreen(),
                       txt: butSkip, 
                       width: 0.4,
                       height: 0.1, 
@@ -83,6 +84,7 @@ class ThirdScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ButtonPush(
+                      isEnabled: true,
                       size: 16,
                       txt: "Назад", 
                       page: (context) => SecondScreen(),
@@ -93,6 +95,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                     const SizedBox(width: 8),
                     ButtonPush(
+                      isEnabled: true,
                       size: 16,
                       txt: "Дальше", 
                       page: (context) => FourthScreen(),

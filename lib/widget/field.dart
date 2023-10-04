@@ -7,8 +7,10 @@ class Field extends StatelessWidget {
   final String labtext;
   final String hinttxt;
   final bool mode;
+  final ValueChanged<String>? onChange; 
+  final TextEditingController? controller;
 
-  const Field({required this.width, required this.labtext, required this.height, required this.colortxt, required this.mode, required this.hinttxt});
+  const Field({required this.width, this.controller, this.onChange, required this.labtext, required this.height, required this.colortxt, required this.mode, required this.hinttxt});
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,8 @@ class Field extends StatelessWidget {
         child: SizedBox(
           width: rectangleWidth - 16,
           child: TextField(
+              onChanged: onChange, 
+              controller: controller,
               decoration: InputDecoration(
                 border: InputBorder.none, 
                 labelText: labtext,

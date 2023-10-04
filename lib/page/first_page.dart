@@ -5,6 +5,7 @@ import 'package:flutter_beginning/widget/button.dart';
 import 'package:flutter_beginning/widget/button_text.dart';
 import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/page/second_page.dart';
+import 'package:flutter_beginning/page/fourth_page.dart';
 
 class FirstScreen extends StatelessWidget {
   final String butSkip = "Пропустить";
@@ -32,6 +33,7 @@ class FirstScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ButtonText(
+                      page: (context) => FourthScreen(),
                       txt: butSkip, 
                       width: 0.4,
                       height: 0.1, 
@@ -82,6 +84,7 @@ class FirstScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ButtonPush(
+                      isEnabled: true,
                       size: 16,
                       txt: "Дальше", 
                       page: (context) => SecondScreen(),
