@@ -14,21 +14,22 @@ class SixthScreen extends StatefulWidget {
 class _SixthScreenState extends State<SixthScreen> {
   TextEditingController _codeController = TextEditingController();
   List<bool> circleStates = [false, false, false, false];
-  int currentIndex = 0;
 
  void updateCircles() {
     for (int i = 0; i < circleStates.length; i++) {
-      circleStates[i] = i < currentIndex;
+      circleStates[i] = i < _codeController.text.length;
     }
+    setState(() {});
   }
 
-  void clearCircles() {
-    setState(() {
-      currentIndex = 0;
-      circleStates = [false, false, false, false];
+  @override
+  void initState() {
+    super.initState();
+    _codeController.addListener(() {
+      updateCircles();
     });
   }
-  
+
   @override
     void dispose() {
     _codeController.dispose();
@@ -107,7 +108,7 @@ class _SixthScreenState extends State<SixthScreen> {
                     );
                   }).toList(),
                 ),
-                SizedBox(height: screenHeight * 0.03,),
+                SizedBox(height: screenHeight * 0.06,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
