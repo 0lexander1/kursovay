@@ -10,7 +10,7 @@ class TextPlace extends StatelessWidget {
   final FontWeight st;
   final TextAlign align;
 
-  TextPlace({required this.txt, required this.align, required this.st, required this.width, required this.height, required this.backgroundColor, required this.colortxt, required this.size,});
+  const TextPlace({required this.txt, required this.align, required this.st, required this.width, required this.height, required this.backgroundColor, required this.colortxt, required this.size,});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class TextPlace extends StatelessWidget {
         color: backgroundColor, 
       ),
       child: Center(
-        child: Container(
+        child: SizedBox(
           width: rectangleWidth,
           child: Text(
             txt,

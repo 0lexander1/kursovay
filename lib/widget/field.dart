@@ -8,7 +8,7 @@ class Field extends StatelessWidget {
   final String hinttxt;
   final bool mode;
 
-  Field({required this.width, required this.labtext, required this.height, required this.colortxt, required this.mode, required this.hinttxt});
+  const Field({required this.width, required this.labtext, required this.height, required this.colortxt, required this.mode, required this.hinttxt});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class Field extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Center(
-        child: Container(
+        child: SizedBox(
           width: rectangleWidth - 16,
           child: TextField(
               decoration: InputDecoration(

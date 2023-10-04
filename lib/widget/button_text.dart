@@ -8,7 +8,7 @@ class ButtonText extends StatelessWidget {
   final double height; 
   final Color colortxt;
 
-  ButtonText({required this.txt, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
+  const ButtonText({required this.txt, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class ButtonText extends StatelessWidget {
           style: TextButton.styleFrom(
           minimumSize: Size(rectangleWidth, rectangleHeight),
           backgroundColor: backgroundColor,
-          textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),

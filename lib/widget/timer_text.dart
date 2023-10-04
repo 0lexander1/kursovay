@@ -17,7 +17,7 @@ class _TimerTextState extends State<TimerText> {
   }
 
   void startTimer() {
-    timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
+    timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
       setState(() {
         seconds--;
         if (seconds == 0) 
@@ -33,7 +33,7 @@ class _TimerTextState extends State<TimerText> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
-    return Container(
+    return SizedBox(
               
       width: screenWidth * 0.8,
       height: screenHeight * 0.1,

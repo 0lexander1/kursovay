@@ -4,7 +4,7 @@ class PictureShape extends StatelessWidget {
   final double width;
   final double height; 
 
-  PictureShape({required this.width, required this.height});
+  const PictureShape({required this.width, required this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class PictureShape extends StatelessWidget {
       width: rectangleWidth,
       height: rectangleHeight,
          decoration: BoxDecoration(
-         color: Color.fromARGB(0, 156, 215, 228), 
+         color: const Color.fromARGB(0, 156, 215, 228), 
          borderRadius: BorderRadius.circular(10),
        ),
        

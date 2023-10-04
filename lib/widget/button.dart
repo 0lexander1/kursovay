@@ -11,7 +11,7 @@ class ButtonPush extends StatelessWidget {
 
  
 
-  ButtonPush({required this.txt, required this.size, required this.page, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
+  const ButtonPush({required this.txt, required this.size, required this.page, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
 
   @override
   Widget build(BuildContext context) {

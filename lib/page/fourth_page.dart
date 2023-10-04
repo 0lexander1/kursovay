@@ -3,7 +3,6 @@ import 'package:flutter_beginning/widget/button.dart';
 import 'package:flutter_beginning/page/first_page.dart';
 import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/widget/field.dart';
-import 'package:flutter_beginning/widget/button.dart';
 import 'package:flutter_beginning/page/fifth.dart';
 
 
@@ -27,12 +26,12 @@ class FourthScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
+                    SizedBox(
                       width: screenWidth * 0.1,
                         child: Image.asset("assets/images/Hello.jpg", fit: BoxFit.fill,)
                     ),
                     SizedBox(width: screenWidth * 0.02,),
-                    TextPlace(
+                    const TextPlace(
                       txt: "Добро пожаловать!",
                       st: FontWeight.bold,
                       align: TextAlign.left,
@@ -43,11 +42,11 @@ class FourthScreen extends StatelessWidget {
                       size: 32),
                   ],
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 16.0),
+                      padding: EdgeInsets.only(left: 16.0),
                     child : TextPlace(
                       txt: "Войдите, чтобы пользоваться функциями приложения",
                       st: FontWeight.normal, 
@@ -61,7 +60,7 @@ class FourthScreen extends StatelessWidget {
                   ]
                 ),
                 SizedBox(height: screenHeight * 0.05,),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Field(
@@ -82,7 +81,7 @@ class FourthScreen extends StatelessWidget {
                       size: 16,
                       txt: "Далее", 
                       page: (context) => FifthScreen(),
-                      colortxt: Color.fromARGB(255, 255, 255, 255), 
+                      colortxt: const Color.fromARGB(255, 255, 255, 255), 
                       width: 0.8, 
                       height: 0.09, 
                       backgroundColor: const Color.fromARGB(255,201,212,251),
@@ -90,7 +89,7 @@ class FourthScreen extends StatelessWidget {
                    ],
                 ),
                 SizedBox(height:  screenHeight * 0.25,),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     TextPlace(

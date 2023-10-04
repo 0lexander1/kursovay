@@ -5,7 +5,7 @@ class PictureMain extends StatelessWidget {
   final double width;
   final double height; 
 
-  PictureMain({required this.width, required this.height, required this.picture});
+  const PictureMain({required this.width, required this.height, required this.picture});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class PictureMain extends StatelessWidget {
       width: rectangleWidth,
       height: rectangleHeight - 2,
          decoration: BoxDecoration(
-         color: Color.fromARGB(0, 156, 215, 228), 
+         color:const Color.fromARGB(0, 156, 215, 228), 
          borderRadius: BorderRadius.circular(10),
        ),
        

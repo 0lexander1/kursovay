@@ -36,11 +36,11 @@ class ThirdScreen extends StatelessWidget {
                       txt: butSkip, 
                       width: 0.4,
                       height: 0.1, 
-                      backgroundColor: Color.fromARGB(0, 255, 255, 255), 
+                      backgroundColor: const Color.fromARGB(0, 255, 255, 255), 
                       colortxt: Colors.blue
                       ),
                       SizedBox(width: screenWidth * 0.1,),
-                    PictureShape(
+                    const PictureShape(
                       width: 0.5, 
                       height: 0.25, 
                                             ), 
@@ -55,7 +55,7 @@ class ThirdScreen extends StatelessWidget {
                       size: 24,
                       align: TextAlign.center,
                       st: FontWeight.bold,
-                      backgroundColor: Color.fromARGB(0, 255, 255, 255),
+                      backgroundColor: const Color.fromARGB(0, 255, 255, 255),
                       colortxt: Colors.green,
                       width: 0.7,
                       height: 0.06,
@@ -71,7 +71,7 @@ class ThirdScreen extends StatelessWidget {
                       size: 16,
                       align: TextAlign.center,
                       st: FontWeight.normal,
-                      backgroundColor: Color.fromARGB(0, 255, 255, 255),
+                      backgroundColor: const Color.fromARGB(0, 255, 255, 255),
                       colortxt: Colors.grey,
                       width: 0.7,
                       height: 0.08,
@@ -86,24 +86,24 @@ class ThirdScreen extends StatelessWidget {
                       size: 16,
                       txt: "Назад", 
                       page: (context) => SecondScreen(),
-                      colortxt: Color.fromARGB(255, 255, 255, 255), 
+                      colortxt: const Color.fromARGB(255, 255, 255, 255), 
                       width: 0.4, 
                       height: 0.09, 
-                      backgroundColor: Color.fromARGB(255, 105, 220, 220),
+                      backgroundColor: const Color.fromARGB(255, 105, 220, 220),
                       ),
-                      SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     ButtonPush(
                       size: 16,
                       txt: "Дальше", 
                       page: (context) => FourthScreen(),
-                      colortxt: Color.fromARGB(255, 255, 255, 255), 
+                      colortxt: const Color.fromARGB(255, 255, 255, 255), 
                       width: 0.4, height: 0.09, 
-                      backgroundColor: Color.fromARGB(255, 105, 220, 220),
+                      backgroundColor: const Color.fromARGB(255, 105, 220, 220),
                       )
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.07),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                    PictureMain(

@@ -25,11 +25,11 @@ class _CodeInputState extends State<CodeInput> {
       children: [
         for (int i = 0; i < 4; i++)
           Container(
-            width: screenWidth * 0.12,
-            height: screenHeight * 0.08,
+            width: screenWidth * 0.13,
+            height: screenHeight * 0.07,
             margin: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
-              color: Colors.white54,
+              color: const Color.fromARGB(156, 233, 229, 229), 
               borderRadius: BorderRadius.circular(10.0),
               ),
             child: TextField(

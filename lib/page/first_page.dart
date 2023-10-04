@@ -35,11 +35,11 @@ class FirstScreen extends StatelessWidget {
                       txt: butSkip, 
                       width: 0.4,
                       height: 0.1, 
-                      backgroundColor: Color.fromARGB(0, 255, 255, 255), 
+                      backgroundColor: const Color.fromARGB(0, 255, 255, 255), 
                       colortxt: Colors.blue
                       ),
                       SizedBox(width: screenWidth * 0.1,),
-                    PictureShape(
+                    const PictureShape(
                       width: 0.5, 
                       height: 0.25, 
                     ), 
@@ -53,7 +53,7 @@ class FirstScreen extends StatelessWidget {
                       txt: txt, 
                       size: 24,
                       st: FontWeight.bold,
-                      backgroundColor: Color.fromARGB(0, 255, 255, 255),
+                      backgroundColor: const Color.fromARGB(0, 255, 255, 255),
                       colortxt: Colors.green,
                       width: 0.7,
                       align: TextAlign.center,
@@ -69,7 +69,7 @@ class FirstScreen extends StatelessWidget {
                       txt: txt2, 
                       size: 16,
                       st: FontWeight.normal,
-                      backgroundColor: Color.fromARGB(0, 255, 255, 255),
+                      backgroundColor: const Color.fromARGB(0, 255, 255, 255),
                       colortxt: Colors.grey,
                       width: 0.7,
                       height: 0.08,
@@ -85,15 +85,15 @@ class FirstScreen extends StatelessWidget {
                       size: 16,
                       txt: "Дальше", 
                       page: (context) => SecondScreen(),
-                      colortxt: Color.fromARGB(255, 255, 255, 255), 
+                      colortxt: const Color.fromARGB(255, 255, 255, 255), 
                       width: 0.4, 
                       height: 0.09, 
-                      backgroundColor: Color.fromARGB(255, 105, 220, 220),
+                      backgroundColor: const Color.fromARGB(255, 105, 220, 220),
                       )
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.07),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                    PictureMain(

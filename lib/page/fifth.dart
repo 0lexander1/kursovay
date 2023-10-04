@@ -25,12 +25,12 @@ class FifthScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
+                    SizedBox(
                       width: screenWidth * 0.1,
                         child: Image.asset("assets/images/Hello.jpg", fit: BoxFit.fill,)
                     ),
                     SizedBox(width: screenWidth * 0.02,),
-                    TextPlace(
+                    const TextPlace(
                       txt: "Добро пожаловать!",
                       st: FontWeight.bold,
                       align: TextAlign.left,
@@ -41,11 +41,11 @@ class FifthScreen extends StatelessWidget {
                       size: 32),
                   ],
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 16.0),
+                      padding: EdgeInsets.only(left: 16.0),
                     child : TextPlace(
                       txt: "Войдите, чтобы пользоваться функциями приложения",
                       st: FontWeight.normal, 
@@ -59,7 +59,7 @@ class FifthScreen extends StatelessWidget {
                   ]
                 ),
                 SizedBox(height: screenHeight * 0.05,),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Field(
@@ -88,7 +88,7 @@ class FifthScreen extends StatelessWidget {
                    ],
                 ),
                 SizedBox(height:  screenHeight * 0.25,),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     TextPlace(

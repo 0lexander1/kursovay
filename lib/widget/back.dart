@@ -7,7 +7,7 @@ class Back extends StatelessWidget {
   final Widget Function(BuildContext) page;
 
 
-  Back({required this.width, required this.height, required this.page});
+  const Back({required this.width, required this.height, required this.page});
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +29,12 @@ class Back extends StatelessWidget {
           ),
         );
         },
-       child: Image.asset("assets/images/Back.jpg", fit: BoxFit.fill,),
+       
        style:  ElevatedButton.styleFrom(
        minimumSize: Size(rectangleWidth, rectangleHeight),
        backgroundColor: Colors.white,
-       )
+      ),
+      child: Image.asset("assets/images/Back.jpg", fit: BoxFit.fill,),
     );
   }
 }

@@ -10,7 +10,6 @@ class SixthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
     return MaterialApp(
@@ -31,7 +30,7 @@ class SixthScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.1,),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextPlace(
@@ -39,26 +38,26 @@ class SixthScreen extends StatelessWidget {
                       align: TextAlign.center, 
                       st: FontWeight.bold, 
                       width: 0.8, 
-                      height: 0.2, 
+                      height: 0.1, 
                       backgroundColor: Colors.white, 
                       colortxt: Colors.black, 
                       size: 24)
                   ],
                 ),
-                SizedBox(height: screenHeight * 0.1,),
+                SizedBox(height: screenHeight * 0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CodeInput()
                   ],
                 ),
-                SizedBox(height: screenHeight * 0.1,),
+                SizedBox(height: screenHeight * 0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TimerText(),
                   ],
-                )
+                ),
               ],
             ),
           ),
