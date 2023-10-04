@@ -97,7 +97,7 @@ class _SixthScreenState extends State<SixthScreen> {
                       align: TextAlign.center,
                       st: FontWeight.normal,
                       width: 0.8,
-                      height: 0.1,
+                      height: 0.06,
                       backgroundColor: const Color.fromARGB(0, 255, 255, 255), 
                       colortxt: Colors.grey, 
                       size: 16)
@@ -108,8 +108,8 @@ class _SixthScreenState extends State<SixthScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: codeList.map((code) {
                     return Container(
-                      width: 20.0,
-                      height: 20.0,
+                      width: 10.0,
+                      height: 10.0,
                       margin: EdgeInsets.symmetric(horizontal: 4.0),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
@@ -118,7 +118,7 @@ class _SixthScreenState extends State<SixthScreen> {
                     );
                   }).toList(),
                 ),
-                SizedBox(height: screenHeight * 0.08,),
+                SizedBox(height: screenHeight * 0.04,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

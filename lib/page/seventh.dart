@@ -7,6 +7,8 @@ import 'package:flutter_beginning/page/fifth_page.dart';
 import 'package:flutter_beginning/widget/button_text.dart';
 import 'package:flutter_beginning/page/eighth_page.dart';
 
+import '../widget/pol.dart';
+
 
 class SeventhScreen extends StatefulWidget {
   @override
@@ -14,13 +16,21 @@ class SeventhScreen extends StatefulWidget {
 }
 
 class _SeventhScreenState extends State<SeventhScreen> {
-  TextEditingController _emailController = TextEditingController();
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _famController = TextEditingController();
+  TextEditingController _otchlController = TextEditingController();
+  TextEditingController _birthdaylController = TextEditingController();
+  TextEditingController _polController = TextEditingController();
   bool _isButtonEnabled = false;
 
 
   @override
     void dispose() {
-    _emailController.dispose();
+    _nameController.dispose();
+    _famController.dispose();
+    _otchlController.dispose();
+    _birthdaylController.dispose();
+    _polController.dispose();
     super.dispose();
   }
 
@@ -29,6 +39,16 @@ class _SeventhScreenState extends State<SeventhScreen> {
 
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
+
+    void _checkFields() {
+      setState(() {
+        _isButtonEnabled = _nameController.text.isNotEmpty &&
+            _famController.text.isNotEmpty &&
+            _otchlController.text.isNotEmpty &&
+            _birthdaylController.text.isNotEmpty &&
+            _polController.text.isNotEmpty;
+      });
+    }
 
     return MaterialApp(
       home: Scaffold(
@@ -48,7 +68,7 @@ class _SeventhScreenState extends State<SeventhScreen> {
                       st: FontWeight.bold,
                       align: TextAlign.left,
                       width: 0.7, 
-                      height: 0.15, 
+                      height: 0.12, 
                       backgroundColor: Colors.white, 
                       colortxt: Colors.black, 
                       size: 30),
@@ -65,6 +85,9 @@ class _SeventhScreenState extends State<SeventhScreen> {
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16.0),
+                      child:
                       TextPlace(
                       txt: "Без карты пациента вы не сможете заказать анализы.",
                       st: FontWeight.normal, 
@@ -74,11 +97,15 @@ class _SeventhScreenState extends State<SeventhScreen> {
                       backgroundColor: Colors.white, 
                       colortxt: Colors.grey, 
                       size: 16)
+                      )
                       ]
                     ),
                   const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16.0),
+                      child:
                       TextPlace(
                       txt: "В картах пациентов будут храниться результаты анализов вас и ваших близких.",
                       st: FontWeight.normal, 
@@ -88,82 +115,111 @@ class _SeventhScreenState extends State<SeventhScreen> {
                       backgroundColor: Colors.white, 
                       colortxt: Colors.grey, 
                       size: 16)
+                    )
                       ]
                     ),
-                SizedBox(height: screenHeight * 0.05,),
+                SizedBox(height: screenHeight * 0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Field(
                       width: 0.9, 
                       labtext: "Имя",
-                      height: 0.08, 
+                      height: 0.09, 
                       colortxt: Colors.black45, 
                       mode: false, 
                       hinttxt: "Дмитрий",
                       onChange: (value) {
                         setState(() {
-                          _isButtonEnabled = value.isNotEmpty;
+                          _nameController.text = value;
+                          _checkFields();
                         });
                       },
-                      controller: _emailController,
+                      controller: _nameController,
                     )
                   ],
                 ),
+                SizedBox(height: screenHeight * 0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Field(
                       width: 0.9, 
                       labtext: "Фамилия",
-                      height: 0.08, 
+                      height: 0.09, 
                       colortxt: Colors.black45, 
                       mode: false, 
                       hinttxt: "Ларкин",
                       onChange: (value) {
                         setState(() {
-                          _isButtonEnabled = value.isNotEmpty;
+                          _famController.text = value;
+                          _checkFields();
                         });
                       },
-                      controller: _emailController,
+                      controller: _famController,
                     )
                   ],
                 ),
+                SizedBox(height: screenHeight * 0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Field(
                       width: 0.9, 
                       labtext: "Отчество",
-                      height: 0.08, 
+                      height: 0.09, 
                       colortxt: Colors.black45, 
                       mode: false, 
                       hinttxt: "Михайлович",
                       onChange: (value) {
                         setState(() {
-                          _isButtonEnabled = value.isNotEmpty;
+                          _otchlController.text = value;
+                          _checkFields();
                         });
                       },
-                      controller: _emailController,
+                      controller: _otchlController,
                     )
                   ],
                 ),
+                SizedBox(height: screenHeight * 0.02,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Field(
                       width: 0.9, 
                       labtext: "Дата рождения",
-                      height: 0.08, 
+                      height: 0.09, 
                       colortxt: Colors.black45, 
                       mode: false, 
                       hinttxt: "24 ноября 2003",
                       onChange: (value) {
                         setState(() {
-                          _isButtonEnabled = value.isNotEmpty;
+                          _birthdaylController.text = value;
+                          _checkFields();
                         });
                       },
-                      controller: _emailController,
+                      controller: _birthdaylController,
+                    )
+                  ],
+                ),
+                SizedBox(height: screenHeight * 0.02,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Pol(
+                      width: 0.9, 
+                      labtext: "Пол",
+                      height: 0.09, 
+                      colortxt: Colors.black45, 
+                      mode: false, 
+                      hinttxt: "",
+                      onChange: (value) {
+                        setState(() {
+                           _polController.text = value; // Установка значения поля
+                           _checkFields();
+                        });
+                      },
+                      controller: _polController,
                     )
                   ],
                 ),
@@ -175,7 +231,7 @@ class _SeventhScreenState extends State<SeventhScreen> {
                       isEnabled: _isButtonEnabled ,
                       size: 16,
                       txt: "Создать", 
-                      page: (context) => FifthScreen(),
+                      page: (context) => EighthScreen(),
                       colortxt: const Color.fromARGB(255, 255, 255, 255), 
                       width: 0.8, 
                       height: 0.09, 
