@@ -118,7 +118,7 @@ class _SixthScreenState extends State<SixthScreen> {
                     );
                   }).toList(),
                 ),
-                SizedBox(height: screenHeight * 0.04,),
+                SizedBox(height: screenHeight * 0.08,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

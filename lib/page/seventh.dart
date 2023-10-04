@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_beginning/widget/button.dart';
-import 'package:flutter_beginning/page/first_page.dart';
 import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/widget/field.dart';
-import 'package:flutter_beginning/page/fifth_page.dart';
 import 'package:flutter_beginning/widget/button_text.dart';
 import 'package:flutter_beginning/page/eighth_page.dart';
 
@@ -44,7 +42,6 @@ class _SeventhScreenState extends State<SeventhScreen> {
       setState(() {
         _isButtonEnabled = _nameController.text.isNotEmpty &&
             _famController.text.isNotEmpty &&
-            _otchlController.text.isNotEmpty &&
             _birthdaylController.text.isNotEmpty &&
             _polController.text.isNotEmpty;
       });
@@ -53,7 +50,7 @@ class _SeventhScreenState extends State<SeventhScreen> {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Padding(
+        body: SingleChildScrollView(
           padding: const EdgeInsets.all(8.0),
           child: Center(
             child: Column(
@@ -67,11 +64,11 @@ class _SeventhScreenState extends State<SeventhScreen> {
                       txt: "Создание карты пациента",
                       st: FontWeight.bold,
                       align: TextAlign.left,
-                      width: 0.7, 
+                      width: 0.65, 
                       height: 0.12, 
                       backgroundColor: Colors.white, 
                       colortxt: Colors.black, 
-                      size: 30),
+                      size: 28),
                       ButtonText(
                         page: (context) => EighthScreen(),
                         txt: "Пропустить", 

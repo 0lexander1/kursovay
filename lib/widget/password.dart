@@ -39,7 +39,7 @@ class _CircleButtonState extends State<CircleButton> {
         });
       },
       child: CircleAvatar(
-        radius: size * 0.1,
+        radius: size * 0.12,
         backgroundColor: isPressed ? Colors.blue : const Color.fromARGB(156, 233, 229, 229),
         child: Text(
           widget.number,

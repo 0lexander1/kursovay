@@ -14,13 +14,10 @@ class Field extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Вычисляем ширину прямоугольника
     double screenWidth = MediaQuery.of(context).size.width;
     double rectangleWidth = screenWidth * width; 
-    // Вычисляем высоту прямоугольника
     double screenHeight = MediaQuery.of(context).size.height;
     double rectangleHeight = screenHeight * height - 4;
-
 
     return Container(
       width: rectangleWidth,
@@ -28,21 +25,25 @@ class Field extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color.fromARGB(156, 233, 229, 229), 
         borderRadius: BorderRadius.circular(15),
+        border: Border.all(
+          color: controller != null && controller!.text.isNotEmpty ? Colors.blue : const Color.fromARGB(156, 233, 229, 229),
+          width: 2.0,
+        ),
       ),
       child: Center(
         child: SizedBox(
           width: rectangleWidth - 16,
           child: TextField(
-              onChanged: onChange, 
-              controller: controller,
-              decoration: InputDecoration(
-                border: InputBorder.none, 
-                labelText: labtext,
-                labelStyle: const TextStyle(color:Colors.grey),
-                hintText: hinttxt,
-                hintStyle: TextStyle(color: colortxt),
+            onChanged: onChange, 
+            controller: controller,
+            decoration: InputDecoration(
+              border: InputBorder.none, 
+              labelText: labtext,
+              labelStyle: const TextStyle(color:Colors.grey),
+              hintText: hinttxt,
+              hintStyle: TextStyle(color: colortxt),
             ),
-            style: TextStyle(color: colortxt),
+            style: TextStyle(color: Colors.black), // Установите цвет текста на чёрный
             textAlign: TextAlign.left,
             obscureText: mode,
           ),

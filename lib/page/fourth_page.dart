@@ -31,7 +31,7 @@ class _FourthScreenState extends State<FourthScreen> {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Padding(
+        body: SingleChildScrollView(
           padding: const EdgeInsets.all(8.0),
           child: Center(
             child: Column(
