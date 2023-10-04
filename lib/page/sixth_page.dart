@@ -94,6 +94,7 @@ class _SixthScreenState extends State<SixthScreen> {
                       size: 16)
                   ],
                 ),
+                SizedBox(height: screenHeight * 0.06,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: circleStates.map((isFilled) {
@@ -108,7 +109,7 @@ class _SixthScreenState extends State<SixthScreen> {
                     );
                   }).toList(),
                 ),
-                SizedBox(height: screenHeight * 0.06,),
+                SizedBox(height: screenHeight * 0.1,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
