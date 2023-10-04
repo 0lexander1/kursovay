@@ -41,11 +41,9 @@ class ThirdScreen extends StatelessWidget {
                       ),
                       SizedBox(width: screenWidth * 0.1,),
                     PictureShape(
-                      txt: 'Д_Д', 
                       width: 0.5, 
                       height: 0.25, 
-                      colortxt: Color.fromARGB(255, 255, 255, 255),
-                      ), 
+                                            ), 
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.1),
@@ -55,6 +53,7 @@ class ThirdScreen extends StatelessWidget {
                     TextPlace(
                       txt: txt, 
                       size: 24,
+                      align: TextAlign.center,
                       st: FontWeight.bold,
                       backgroundColor: Color.fromARGB(0, 255, 255, 255),
                       colortxt: Colors.green,
@@ -70,6 +69,7 @@ class ThirdScreen extends StatelessWidget {
                     TextPlace(
                       txt: txt2, 
                       size: 16,
+                      align: TextAlign.center,
                       st: FontWeight.normal,
                       backgroundColor: Color.fromARGB(0, 255, 255, 255),
                       colortxt: Colors.grey,
@@ -83,6 +83,7 @@ class ThirdScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ButtonPush(
+                      size: 16,
                       txt: "Назад", 
                       page: (context) => SecondScreen(),
                       colortxt: Color.fromARGB(255, 255, 255, 255), 
@@ -92,6 +93,7 @@ class ThirdScreen extends StatelessWidget {
                       ),
                       SizedBox(width: 8),
                     ButtonPush(
+                      size: 16,
                       txt: "Дальше", 
                       page: (context) => FourthScreen(),
                       colortxt: Color.fromARGB(255, 255, 255, 255), 
@@ -106,10 +108,8 @@ class ThirdScreen extends StatelessWidget {
                   children: [
                    PictureMain(
                     picture: "assets/images/130.jpg",
-                      txt: 'Д_Д', 
                       width: 0.6, 
                       height: 0.3, 
-                      colortxt: Color.fromARGB(255, 255, 255, 255),
                     ), 
                   ]
                 )

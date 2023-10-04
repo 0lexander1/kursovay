@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 class PictureMain extends StatelessWidget {
-  final String txt;
   final String picture;
   final double width;
   final double height; 
-  final Color colortxt;
 
-  PictureMain({required this.txt, required this.width, required this.height, required this.colortxt, required this.picture});
+  PictureMain({required this.width, required this.height, required this.picture});
 
   @override
   Widget build(BuildContext context) {

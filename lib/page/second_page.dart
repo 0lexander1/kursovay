@@ -41,11 +41,9 @@ class SecondScreen extends StatelessWidget {
                       ),
                       SizedBox(width: screenWidth * 0.1,),
                     PictureShape(
-                      txt: 'Д_Д', 
                       width: 0.5, 
                       height: 0.25, 
-                      colortxt: Color.fromARGB(255, 255, 255, 255),
-                      ), 
+                    ), 
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.1),
@@ -54,6 +52,7 @@ class SecondScreen extends StatelessWidget {
                   children: [
                     TextPlace(
                       txt: txt, 
+                      align:  TextAlign.center,
                       size: 24,
                       st: FontWeight.bold,
                       backgroundColor: Color.fromARGB(0, 255, 255, 255),
@@ -69,6 +68,7 @@ class SecondScreen extends StatelessWidget {
                   children: [
                     TextPlace(
                       txt: txt2, 
+                      align: TextAlign.center,
                       size: 16,
                       st: FontWeight.normal,
                       backgroundColor: Color.fromARGB(0, 255, 255, 255),
@@ -83,6 +83,7 @@ class SecondScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ButtonPush(
+                      size: 16,
                       txt: "Назад", 
                       page: (context) => FirstScreen(),
                       colortxt: Color.fromARGB(255, 255, 255, 255), 
@@ -90,8 +91,9 @@ class SecondScreen extends StatelessWidget {
                       height: 0.09, 
                       backgroundColor: Color.fromARGB(255, 105, 220, 220),
                       ),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                     ButtonPush(
+                      size: 16,
                       txt: "Дальше", 
                       page: (context) => ThirdScreen(),
                       colortxt: Color.fromARGB(255, 255, 255, 255), 
@@ -106,10 +108,8 @@ class SecondScreen extends StatelessWidget {
                   children: [
                    PictureMain(
                     picture: "assets/images/doctor.jpg",
-                      txt: 'Д_Д', 
                       width: 0.6, 
                       height: 0.3, 
-                      colortxt: Color.fromARGB(255, 255, 255, 255),
                     ), 
                   ]
                 )

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_beginning/widget/button.dart';
-import 'package:flutter_beginning/page/first_page.dart';
 import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/widget/field.dart';
-import 'package:flutter_beginning/widget/button.dart';
-import 'package:flutter_beginning/page/fifth.dart';
+import 'package:flutter_beginning/page/sixth_page.dart';
 
 
-class FourthScreen extends StatelessWidget {
+class FifthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -81,11 +79,11 @@ class FourthScreen extends StatelessWidget {
                     ButtonPush(
                       size: 16,
                       txt: "Далее", 
-                      page: (context) => FifthScreen(),
-                      colortxt: Color.fromARGB(255, 255, 255, 255), 
+                      page: (context) => SixthScreen(),
+                      colortxt: const Color.fromARGB(255,255,255,255), 
                       width: 0.8, 
                       height: 0.09, 
-                      backgroundColor: const Color.fromARGB(255,201,212,251),
+                      backgroundColor: const Color.fromARGB(255,26,111,238),
                       )
                    ],
                 ),
@@ -110,7 +108,7 @@ class FourthScreen extends StatelessWidget {
                   children: [
                     ButtonPush(
                       size: 24,
-                      page: (context) => FirstScreen(),
+                      page: (context) => FifthScreen(),
                       backgroundColor: Colors.white,
                       width: 0.8,
                       height: 0.1,

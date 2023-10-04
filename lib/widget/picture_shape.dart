@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PictureShape extends StatelessWidget {
-  final String txt;
   final double width;
   final double height; 
-  final Color colortxt;
 
-  PictureShape({required this.txt, required this.width, required this.height, required this.colortxt});
+  PictureShape({required this.width, required this.height});
 
   @override
   Widget build(BuildContext context) {

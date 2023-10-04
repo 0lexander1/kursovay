@@ -6,11 +6,12 @@ class ButtonPush extends StatelessWidget {
   final double width;
   final double height; 
   final Color colortxt;
+  final double size;
   final Widget Function(BuildContext) page;
 
  
 
-  ButtonPush({required this.txt, required this.page, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
+  ButtonPush({required this.txt, required this.size, required this.page, required this.width, required this.height, required this.backgroundColor, required this.colortxt});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class ButtonPush extends StatelessWidget {
           ),
         );
         },
-       child: Text(txt), // Текст на кнопке
+       child: Text(txt, style: TextStyle(color: colortxt, fontSize: size),), // Текст на кнопке
           style:  ElevatedButton.styleFrom(
           minimumSize: Size(rectangleWidth, rectangleHeight),
           backgroundColor: backgroundColor,

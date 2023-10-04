@@ -8,8 +8,9 @@ class TextPlace extends StatelessWidget {
   final double height; 
   final Color colortxt;
   final FontWeight st;
+  final TextAlign align;
 
-  TextPlace({required this.txt, required this.st, required this.width, required this.height, required this.backgroundColor, required this.colortxt, required this.size,});
+  TextPlace({required this.txt, required this.align, required this.st, required this.width, required this.height, required this.backgroundColor, required this.colortxt, required this.size,});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class TextPlace extends StatelessWidget {
           child: Text(
             txt,
             style: TextStyle(color: colortxt, fontSize: size, fontFamily: 'Roboto', fontWeight: st, ),
-            textAlign: TextAlign.center,
+            textAlign: align,
           ),
         ),
       ),

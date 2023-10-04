@@ -40,11 +40,9 @@ class FirstScreen extends StatelessWidget {
                       ),
                       SizedBox(width: screenWidth * 0.1,),
                     PictureShape(
-                      txt: 'Д_Д', 
                       width: 0.5, 
                       height: 0.25, 
-                      colortxt: Color.fromARGB(255, 255, 255, 255),
-                      ), 
+                    ), 
                   ],
                 ),
                 SizedBox(height: screenHeight * 0.1),
@@ -58,6 +56,7 @@ class FirstScreen extends StatelessWidget {
                       backgroundColor: Color.fromARGB(0, 255, 255, 255),
                       colortxt: Colors.green,
                       width: 0.7,
+                      align: TextAlign.center,
                       height: 0.06,
                     ),
                   ],
@@ -74,6 +73,7 @@ class FirstScreen extends StatelessWidget {
                       colortxt: Colors.grey,
                       width: 0.7,
                       height: 0.08,
+                      align: TextAlign.center,
                     ),
                   ],
                   ),
@@ -82,6 +82,7 @@ class FirstScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ButtonPush(
+                      size: 16,
                       txt: "Дальше", 
                       page: (context) => SecondScreen(),
                       colortxt: Color.fromARGB(255, 255, 255, 255), 
@@ -97,10 +98,8 @@ class FirstScreen extends StatelessWidget {
                   children: [
                    PictureMain(
                     picture: "assets/images/Illustration.jpg",
-                      txt: 'Д_Д', 
                       width: 0.6, 
                       height: 0.3, 
-                      colortxt: Color.fromARGB(255, 255, 255, 255),
                     ), 
                   ]
                 )
