@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_beginning/page/ninth.dart';
+import 'package:flutter_beginning/page/seventh.dart';
 import 'package:flutter_beginning/widget/button_text.dart';
 import 'package:flutter_beginning/widget/text_place.dart';
 import 'package:flutter_beginning/widget/password.dart';
-import 'package:flutter_beginning/widget/field.dart';
+import 'package:flutter_beginning/page/eighth_page.dart';
 import 'package:flutter_beginning/widget/del.dart';
 
 class SixthScreen extends StatefulWidget {
@@ -22,6 +22,13 @@ class _SixthScreenState extends State<SixthScreen> {
           : ''; // Записываем соответствующую цифру или пустую строку
     }
     setState(() {});
+    if (_codeController.text.length == 4) {
+      // Если введен четырёхзначный код, переходим на следующую страницу
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => SeventhScreen()),
+      );
+    }
   }
 
   @override
@@ -58,7 +65,7 @@ class _SixthScreenState extends State<SixthScreen> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     ButtonText(
-                      page: (context) => NinthScreen(),
+                      page: (context) => EighthScreen(),
                       txt: butSkip, 
                       width: 0.4,
                       height: 0.1, 
